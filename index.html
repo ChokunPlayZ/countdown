@@ -25,7 +25,8 @@
 <body>
     <div class="centerbox">
         <h1>New Year Countdown</h1>
-        <h2 id="demo">tim timt imt</h2>
+        <h2 id="clock">Waiting</h2>
+        <h2 id="commenttext"></h2>
     </div>
 </body>
 <script>
@@ -48,13 +49,14 @@
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
       // Display the result in the element with id="demo"
-      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      document.getElementById("clock").innerHTML = days + "d " + hours + "h "
       + minutes + "m " + seconds + "s ";
     
       // If the count down is finished, write some text
       if (distance < 0) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
+        document.getElementById("clock").innerHTML = "0d 0h 0m 0s";
+        document.getElementById("commenttext").innerHTML = "HAPPY NEW YEAR!";
       }
     }, 1000);
     </script>
